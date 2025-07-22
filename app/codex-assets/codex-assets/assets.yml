@@ -1,0 +1,107 @@
+icons:
+  - id: icon-lupa
+    out: assets/icons/lupa.svg
+    prompt: >
+      Minimal flat outline magnifying glass icon, consistent stroke width, monochrome, SVG-ready.
+    tags: [icon, hotspot]
+
+  - id: icon-marcador
+    out: assets/icons/marcador.svg
+    prompt: >
+      Simple flat pin/marker icon (map pin style), outline, consistent with magnifying glass icon.
+    tags: [icon, hotspot]
+
+  - id: icon-engrengem
+    out: assets/icons/engrenagem.svg
+    prompt: >
+      Flat outline gear icon, single stroke weight, no fill, consistent style.
+    tags: [icon, hotspot]
+
+  - id: icon-pizza
+    out: assets/icons/pizza.svg
+    prompt: >
+      Flat outline pizza slice icon, same stroke style as other icons, vector friendly.
+    tags: [icon, hotspot, fracoes]
+
+  - id: icon-folha
+    out: assets/icons/folha.svg
+    prompt: >
+      Flat outline leaf icon, simple curve, matches stroke width of other icons.
+    tags: [icon, hotspot, biomas]
+
+  - id: icon-orgao
+    out: assets/icons/orgao.svg
+    prompt: >
+      Simple stylized organ icon (generic shape), outline style, matches other icons.
+    tags: [icon, hotspot, corpo-humano]
+
+  - id: icon-regua
+    out: assets/icons/regua.svg
+    prompt: >
+      Outline ruler icon, flat, consistent stroke width.
+    tags: [icon, hotspot, geometria]
+
+mascot:
+  - id: detetive-fracao
+    out: assets/mascots/detetive-fracao.png
+    prompt: >
+      Friendly cartoon detective kid holding a magnifying glass, bright colors, flat shading, no text,
+      transparent background if possible.
+    size: 1024x1024
+    tags: [mascot, fracoes]
+
+badges:
+  - id: badge-detetive-fracoes
+    out: assets/badges/detetive-fracoes.svg
+    prompt: >
+      Gold medal badge with a small pizza slice symbol in center, flat vector, no text, SVG style.
+    tags: [badge, fracoes]
+
+  - id: badge-detetive-biomas
+    out: assets/badges/detetive-biomas.svg
+    prompt: >
+      Green medal badge with a leaf symbol in center, flat vector, no text.
+    tags: [badge, biomas]
+
+  - id: badge-detetive-corpo-humano
+    out: assets/badges/detetive-corpo-humano.svg
+    prompt: >
+      Red medal badge with a simple organ/heart icon in center, flat vector, no text.
+    tags: [badge, corpo-humano]
+
+  - id: badge-detetive-geometria
+    out: assets/badges/detetive-geometria.svg
+    prompt: >
+      Blue medal badge with geometric shape (triangle + circle) icon, flat vector, no text.
+    tags: [badge, geometria]
+
+ui:
+  - id: ui-botao-primario
+    out: assets/ui/botao-primario.svg
+    prompt: >
+      Rounded rectangle button base, flat vector, light outline, no text, neutral gray tone.
+    tags: [ui, button]
+
+  - id: ui-barra-progresso
+    out: assets/ui/barra-progresso.svg
+    prompt: >
+      Simple horizontal progress bar frame (empty), flat vector, outline only, no text.
+    tags: [ui, progress]
+
+  - id: ui-modal-frame
+    out: assets/ui/modal-frame.svg
+    prompt: >
+      Basic modal/dialog frame outline with rounded corners, flat vector, no text.
+    tags: [ui, modal]
+
+  - id: ui-coracao-vida
+    out: assets/ui/coracao-vida.svg
+    prompt: >
+      Flat outline heart icon for life/health, consistent stroke width with other UI icons.
+    tags: [ui, vida]
+
+  - id: ui-estrela-xp
+    out: assets/ui/estrela-xp.svg
+    prompt: >
+      Flat outline star icon for XP points, single stroke, no fill.
+    tags: [ui, xp]
