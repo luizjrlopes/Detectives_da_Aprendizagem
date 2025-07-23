@@ -1,26 +1,41 @@
 {
-  "tituloMissao": "Missão Biosfera Oculta",
-  "narrativa": "No coração de um laboratório de ecologia, um antigo atlas guarda segredos sobre diferentes biomas. Cada mapa escondido revela pistas sobre os ecossistemas do planeta.",
-  "objetivo": "Colete 3 pistas sobre biomas e use-as para decifrar o código que desbloqueia o atlas.",
+  "tituloMissao": "Missao Biosfera Oculta",
+  "narrativa": "No coracao de um laboratorio de ecologia, um antigo atlas guarda segredos sobre diferentes biomas. Cada mapa escondido revela pistas sobre os ecossistemas do planeta.",
+  "objetivo": "Colete 3 pistas sobre biomas e use-as para decifrar o codigo que desbloqueia o atlas.",
   "hotspots": [
     {
       "id": "hotspot1",
-      "descricao": "Uma placa mostra uma floresta densa, com chuva constante e aves exóticas voando sobre você.",
+      "descricao": "Uma placa mostra uma floresta densa, com chuva constante e aves exoticas voando sobre voce.",
       "conceito": "Floresta Tropical",
-      "tipoInteracao": "click"
+      "tipoInteracao": "click",
+      "x": "35%",
+      "y": "45%",
+      "prompt": "Qual bioma possui clima quente e umido o ano todo?",
+      "options": ["Floresta Tropical", "Deserto", "Tundra", "Campo"],
+      "answer": 0
     },
     {
       "id": "hotspot2",
-      "descricao": "Você encontra uma savana com gramíneas altas e poucas árvores, sob um sol escaldante.",
+      "descricao": "Voce encontra uma savana com gramineas altas e poucas arvores, sob um sol escaldante.",
       "conceito": "Pradaria",
-      "tipoInteracao": "click"
+      "tipoInteracao": "click",
+      "x": "55%",
+      "y": "60%",
+      "prompt": "Que vegetacao predomina na tundra?",
+      "options": ["Cactos", "Musgos e liquens", "Florestas densas", "Gramineas"],
+      "answer": 1
     },
     {
       "id": "hotspot3",
-      "descricao": "Há um painel interativo que pede para arrastar o nome correto ao mapa pontilhado de tundra.",
+      "descricao": "Ha um painel interativo que pede para arrastar o nome correto ao mapa pontilhado de tundra.",
       "conceito": "Tundra",
-      "tipoInteracao": "drag"
+      "tipoInteracao": "drag",
+      "x": "75%",
+      "y": "30%",
+      "prompt": "Desertos apresentam ____ temperaturas e pouca chuva.",
+      "options": ["altas", "baixas", "medias", "constantes"],
+      "answer": 0
     }
   ],
-  "desafioFinal": "Use as 3 pistas de biomas para encontrar a sequência correta de símbolos no atlas e abrir o arquivo secreto."
+  "desafioFinal": "Use as 3 pistas de biomas para encontrar a sequencia correta de simbolos no atlas e abrir o arquivo secreto."
 }

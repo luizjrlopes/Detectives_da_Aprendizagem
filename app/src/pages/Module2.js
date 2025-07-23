@@ -10,32 +10,7 @@ import { motion } from 'framer-motion';
 import styles from './Module2.module.css';
 
 export default function Module2() {
-  const questions = [
-    {
-      id: 'q1',
-      x: '35%',
-      y: '45%',
-      prompt: 'Qual bioma possui clima quente e úmido o ano todo?',
-      options: ['Floresta Tropical', 'Deserto', 'Tundra', 'Campo'],
-      answer: 0,
-    },
-    {
-      id: 'q2',
-      x: '55%',
-      y: '60%',
-      prompt: 'Que vegetação predomina na tundra?',
-      options: ['Cactos', 'Musgos e liquens', 'Florestas densas', 'Gramíneas'],
-      answer: 1,
-    },
-    {
-      id: 'q3',
-      x: '75%',
-      y: '30%',
-      prompt: 'Desertos apresentam ____ temperaturas e pouca chuva.',
-      options: ['altas', 'baixas', 'médias', 'constantes'],
-      answer: 0,
-    },
-  ];
+  const questions = content.hotspots;
 
   const [currentQ, setCurrentQ] = useState(0);
   const [showModal, setShowModal] = useState(false);

@@ -10,33 +10,8 @@ import { motion } from 'framer-motion';
 import styles from './Module1.module.css';
 
 export default function Module1() {
-  // Perguntas do módulo com posições dos hotspots
-  const questions = [
-    {
-      id: 'q1',
-      x: '30%',
-      y: '40%',
-      prompt: 'Que fração da pizza está faltando?',
-      options: ['1/4', '1/2', '3/4', '1/8'],
-      answer: 0,
-    },
-    {
-      id: 'q2',
-      x: '60%',
-      y: '50%',
-      prompt: 'Quanto é 2/3 + 3/4?',
-      options: ['6/7', '17/12', '1', '5/12'],
-      answer: 1,
-    },
-    {
-      id: 'q3',
-      x: '80%',
-      y: '70%',
-      prompt: '3/4 equivale a quantos porcento?',
-      options: ['50%', '75%', '25%', '100%'],
-      answer: 1,
-    },
-  ];
+  // Perguntas do módulo carregadas a partir do JSON de conteúdo
+  const questions = content.hotspots;
 
   const [currentQ, setCurrentQ] = useState(0);
   const [showModal, setShowModal] = useState(false);

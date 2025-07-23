@@ -1,26 +1,41 @@
 {
-  "tituloMissao": "Missão Corpo Vivo",
-  "narrativa": "Dentro de um museu de anatomia interativa, consta que um compartimento secreto guarda o conhecimento sobre órgãos vitais. Você deve coletar pistas anatômicas para acessá-lo.",
-  "objetivo": "Investigue 3 pontos do corpo humano e use as informações para liberar o cofre digital do museu.",
+  "tituloMissao": "Missao Corpo Vivo",
+  "narrativa": "Dentro de um museu de anatomia interativa, consta que um compartimento secreto guarda o conhecimento sobre orgaos vitais. Voce deve coletar pistas anatomicas para acessa-lo.",
+  "objetivo": "Investigue 3 pontos do corpo humano e use as informacoes para liberar o cofre digital do museu.",
   "hotspots": [
     {
       "id": "hotspot1",
-      "descricao": "Você encontra um modelo de coração pulsando, mostrando como o sangue é bombeado.",
-      "conceito": "Coração",
-      "tipoInteracao": "click"
+      "descricao": "Voce encontra um modelo de coracao pulsando, mostrando como o sangue e bombeado.",
+      "conceito": "Coracao",
+      "tipoInteracao": "click",
+      "x": "30%",
+      "y": "35%",
+      "prompt": "Qual orgao bombeia sangue?",
+      "options": ["Coracao", "Rim", "Pulmao", "Estomago"],
+      "answer": 0
     },
     {
       "id": "hotspot2",
-      "descricao": "Ao lado, uma réplica de pulmão infla e desinfla, ilustrando a troca gasosa.",
-      "conceito": "Pulmões",
-      "tipoInteracao": "click"
+      "descricao": "Ao lado, uma replica de pulmao infla e desinfla, ilustrando a troca gasosa.",
+      "conceito": "Pulmoes",
+      "tipoInteracao": "click",
+      "x": "55%",
+      "y": "60%",
+      "prompt": "Qual orgao filtra o sangue?",
+      "options": ["Figado", "Pulmao", "Rim", "Coracao"],
+      "answer": 2
     },
     {
       "id": "hotspot3",
-      "descricao": "Há um esqueleto com uma etiqueta indicando \"RIM\" que precisa ser arrastada para o lugar correto.",
+      "descricao": "Ha um esqueleto com uma etiqueta indicando 'RIM' que precisa ser arrastada para o lugar correto.",
       "conceito": "Rim",
-      "tipoInteracao": "drag"
+      "tipoInteracao": "drag",
+      "x": "75%",
+      "y": "45%",
+      "prompt": "Onde ocorre a troca gasosa?",
+      "options": ["Estomago", "Pulmao", "Coracao", "Pele"],
+      "answer": 1
     }
   ],
-  "desafioFinal": "Com as pistas dos órgãos, monte o diagrama correto no terminal interativo para revelar o compartimento secreto."
+  "desafioFinal": "Com as pistas dos orgaos, monte o diagrama correto no terminal interativo para revelar o compartimento secreto."
 }

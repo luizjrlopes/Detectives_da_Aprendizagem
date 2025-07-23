@@ -10,32 +10,7 @@ import { motion } from 'framer-motion';
 import styles from './Module3.module.css';
 
 export default function Module3() {
-  const questions = [
-    {
-      id: 'q1',
-      x: '30%',
-      y: '35%',
-      prompt: 'Qual órgão bombeia sangue?',
-      options: ['Coração', 'Rim', 'Pulmão', 'Estômago'],
-      answer: 0,
-    },
-    {
-      id: 'q2',
-      x: '55%',
-      y: '60%',
-      prompt: 'Qual órgão filtra o sangue?',
-      options: ['Fígado', 'Pulmão', 'Rim', 'Coração'],
-      answer: 2,
-    },
-    {
-      id: 'q3',
-      x: '75%',
-      y: '45%',
-      prompt: 'Onde ocorre a troca gasosa?',
-      options: ['Estômago', 'Pulmão', 'Coração', 'Pele'],
-      answer: 1,
-    },
-  ];
+  const questions = content.hotspots;
 
   const [currentQ, setCurrentQ] = useState(0);
   const [showModal, setShowModal] = useState(false);
