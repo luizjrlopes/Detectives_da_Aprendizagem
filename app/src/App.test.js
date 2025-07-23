@@ -6,6 +6,7 @@ jest.mock('react-router-dom', () => ({
   Routes: ({ children }) => <div>{children}</div>,
   Route: ({ element }) => <>{element}</>,
   Outlet: () => <div />,
+  useLocation: () => ({ pathname: '/' }),
 }), { virtual: true });
 
 import App from './App';

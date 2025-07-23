@@ -121,3 +121,27 @@ body {
   height: calc(100vh - 160px);
   gap: 16px;
 }
+
+/* Badge de feedback e vitória */
+.badge {
+  background-color: #f1c40f;
+  color: #2c2c2c;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.victory-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
