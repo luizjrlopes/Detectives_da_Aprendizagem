@@ -5,6 +5,11 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read   # ler o conteúdo do repositório
+  pages: write     # permissão para publicar no GitHub Pages
+  id-token: write  # caso use OIDC (opcional aqui)
+
 jobs:
   build:
     # Executa em ambiente Ubuntu
