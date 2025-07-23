@@ -6,12 +6,11 @@ on:
       - main
 
 permissions:
-  contents: read   # permitir leitura do repositório
-  pages: write     # permitir publicar no GitHub Pages
-  id-token: write  # necessário para OIDC (mesmo que não usado aqui)
+  contents: write
+  pages: write # permitir publicar no GitHub Pages
+  id-token: write # necessário para OIDC (mesmo que não usado aqui)
 
 jobs:
-
   build:
     name: Build the React App
     runs-on: ubuntu-latest
@@ -22,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies & build
         working-directory: ./app
@@ -38,7 +37,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # mantém GITHUB_TOKEN para o push
+          persist-credentials: true # mantém GITHUB_TOKEN para o push
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
