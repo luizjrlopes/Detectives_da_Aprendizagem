@@ -1,9 +1,9 @@
 import React from 'react';
-import '../App.css';
+import styles from './Layout.module.css';
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <h1>Detetives da Aprendizagem</h1>
     </header>
   );

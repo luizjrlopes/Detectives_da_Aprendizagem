@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ConfettiParticle from './ConfettiParticle';
+import styles from './QuestionModal.module.css';
 
 // Badge exibido ao finalizar o módulo com animação e confete
 export default function VictoryBadge() {
@@ -9,9 +10,9 @@ export default function VictoryBadge() {
   ));
 
   return (
-    <div className="victory-container">
+    <div className={styles.victoryContainer}>
       <motion.div
-        className="badge"
+        className={styles.badge}
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1.2, 1] }}
         transition={{ duration: 0.6 }}

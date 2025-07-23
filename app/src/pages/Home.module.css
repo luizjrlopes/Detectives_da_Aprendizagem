@@ -1,7 +1,17 @@
+:root {
+  --color-primary: #f1c40f;
+  --color-secondary: #2c2c2c;
+  --color-bg: #1f1f1f;
+  --color-text: #ffffff;
+  --color-error: #c0392b;
+  --color-success: #27ae60;
+  --space-unit: 8px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: var(--space-unit);
 }
 
 @media (min-width: 600px) {
@@ -11,13 +21,14 @@
 }
 
 .card {
-  background-color: #2c2c2c;
-  color: #ffffff;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
+  margin: var(--space-unit);
 }
 
 .image {
@@ -27,7 +38,7 @@
 }
 
 .content {
-  padding: 16px;
+  padding: calc(var(--space-unit) * 2);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -35,20 +46,26 @@
 
 .title {
   font-weight: 600;
-  margin: 0 0 8px;
+  margin: 0 0 var(--space-unit);
 }
 
 .desc {
-  margin: 0 0 16px;
+  margin: 0 0 calc(var(--space-unit) * 2);
+  font-weight: 400;
 }
 
-.button {
-  background-color: #f1c40f;
-  color: #2c2c2c;
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   border: none;
   border-radius: 8px;
-  padding: 8px 16px;
+  padding: calc(var(--space-unit) * 1) calc(var(--space-unit) * 2);
   font-weight: 600;
   cursor: pointer;
   align-self: start;
+  transition: transform 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
