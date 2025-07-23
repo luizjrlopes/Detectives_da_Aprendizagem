@@ -118,6 +118,7 @@ export default function Module4() {
       <QuestionModal
         visible={showModal}
         question={questions[currentQ]}
+        clue={content.hotspots[currentQ].descricao}
         onClose={handleClose}
       />
       </div>
