@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import QuestionModal from '../components/QuestionModal';
 import Hotspot from '../components/Hotspot';
+import StatusBar from "../components/StatusBar";
+import content from "../data/module_1/content.json";
 import VictoryBadge from '../components/VictoryBadge';
 import { motion } from 'framer-motion';
 import styles from './Module1.module.css';
@@ -94,10 +96,17 @@ export default function Module1() {
   }
 
   return (
-    <div
-      className={styles.scene}
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/scenes/padaria.png)` }}
-    >
+    <>
+      <StatusBar progress={currentQ / questions.length} />
+      <div className={styles.info}>
+        <h2>{content.tituloMissao}</h2>
+        <p>{content.narrativa}</p>
+        <p>{content.objetivo}</p>
+      </div>
+      <div
+        className={styles.scene}
+        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/scenes/padaria.png)` }}
+      >
       {/* Hotspots que disparam as perguntas */}
       {questions.map((q, i) => (
         <Hotspot
@@ -117,6 +126,7 @@ export default function Module1() {
         question={questions[currentQ]}
         onClose={handleClose}
       />
-    </div>
+      </div>
+    </>
   );
 }
