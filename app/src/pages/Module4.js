@@ -10,32 +10,7 @@ import { motion } from 'framer-motion';
 import styles from './Module4.module.css';
 
 export default function Module4() {
-  const questions = [
-    {
-      id: 'q1',
-      x: '30%',
-      y: '40%',
-      prompt: 'Qual a área de um retângulo de 4x3?',
-      options: ['7', '12', '9', '8'],
-      answer: 1,
-    },
-    {
-      id: 'q2',
-      x: '55%',
-      y: '60%',
-      prompt: 'Qual a área de um círculo de raio 7?',
-      options: ['49π', '14π', '28', '7π'],
-      answer: 0,
-    },
-    {
-      id: 'q3',
-      x: '75%',
-      y: '30%',
-      prompt: 'Perímetro de um triângulo 3,4,5?',
-      options: ['12', '9', '10', '15'],
-      answer: 0,
-    },
-  ];
+  const questions = content.hotspots;
 
   const [currentQ, setCurrentQ] = useState(0);
   const [showModal, setShowModal] = useState(false);

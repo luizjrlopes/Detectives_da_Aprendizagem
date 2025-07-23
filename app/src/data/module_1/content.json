@@ -1,11 +1,41 @@
 {
-  "tituloMissao": "Missão Cofre Fracionário",
-  "narrativa": "Na padaria do campus, um cofre guarda receitas valiosas. Cada estação da cozinha revela uma pista fracionária para quem prestar atenção.",
-  "objetivo": "Descubra 3 pistas de frações e calcule o código que libera o cofre.",
+  "tituloMissao": "Missao Cofre Fracionario",
+  "narrativa": "Na padaria do campus, um cofre guarda receitas valiosas. Cada estacao da cozinha revela uma pista fracionaria para quem prestar atencao.",
+  "objetivo": "Descubra 3 pistas de fracoes e calcule o codigo que libera o cofre.",
   "hotspots": [
-    {"id":"hotspot1","descricao":"A pizza recém-saída do forno tem um pedaço faltando.","conceito":"1/4","tipoInteracao":"click"},
-    {"id":"hotspot2","descricao":"Na balança, medidas diferentes precisam ser somadas.","conceito":"2/3 + 1/6","tipoInteracao":"click"},
-    {"id":"hotspot3","descricao":"O painel do cofre pede que você converta a fração final em porcentagem.","conceito":"3/5 → 60%","tipoInteracao":"drag"}
+    {
+      "id": "hotspot1",
+      "descricao": "A pizza recem-saida do forno tem um pedaco faltando.",
+      "conceito": "1/4",
+      "tipoInteracao": "click",
+      "x": "30%",
+      "y": "40%",
+      "prompt": "Que fracao da pizza esta faltando?",
+      "options": ["1/4", "1/2", "3/4", "1/8"],
+      "answer": 0
+    },
+    {
+      "id": "hotspot2",
+      "descricao": "Na balanca, medidas diferentes precisam ser somadas.",
+      "conceito": "2/3 + 1/6",
+      "tipoInteracao": "click",
+      "x": "60%",
+      "y": "50%",
+      "prompt": "Quanto é 2/3 + 3/4?",
+      "options": ["6/7", "17/12", "1", "5/12"],
+      "answer": 1
+    },
+    {
+      "id": "hotspot3",
+      "descricao": "O painel do cofre pede que voce converta a fracao final em porcentagem.",
+      "conceito": "3/5 → 60%",
+      "tipoInteracao": "drag",
+      "x": "80%",
+      "y": "70%",
+      "prompt": "3/4 equivale a quantos porcento?",
+      "options": ["50%", "75%", "25%", "100%"],
+      "answer": 1
+    }
   ],
-  "desafioFinal": "Use as três pistas para calcular o valor correto e abrir o cofre."
+  "desafioFinal": "Use as tres pistas para calcular o valor correto e abrir o cofre."
 }

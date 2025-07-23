@@ -1,26 +1,41 @@
 {
-  "tituloMissao": "Missão Formas Secretas",
-  "narrativa": "Em um antigo observatório de matemáticos, há um painel trancado que só se abre quando a geometria é realmente compreendida. Cada forma geométrica fornece uma pista.",
-  "objetivo": "Resolva 3 desafios geométricos e insira a combinação correta para destravar o painel.",
+  "tituloMissao": "Missao Formas Secretas",
+  "narrativa": "Em um antigo observatorio de matematicos, ha um painel trancado que so se abre quando a geometria e realmente compreendida. Cada forma geometrica fornece uma pista.",
+  "objetivo": "Resolva 3 desafios geometricos e insira a combinacao correta para destravar o painel.",
   "hotspots": [
     {
       "id": "hotspot1",
-      "descricao": "Um retângulo desenhado pede que você calcule a área de base 4 e altura 3.",
-      "conceito": "Área = 12",
-      "tipoInteracao": "click"
+      "descricao": "Um retangulo desenhado pede que voce calcule a area de base 4 e altura 3.",
+      "conceito": "Area = 12",
+      "tipoInteracao": "click",
+      "x": "30%",
+      "y": "40%",
+      "prompt": "Qual a area de um retangulo de 4x3?",
+      "options": ["7", "12", "9", "8"],
+      "answer": 1
     },
     {
       "id": "hotspot2",
-      "descricao": "Em um círculo com raio 7, você deve arrastar o valor aproximado da área até o mostrador.",
-      "conceito": "Área ≈ 153.86",
-      "tipoInteracao": "drag"
+      "descricao": "Em um circulo com raio 7, voce deve arrastar o valor aproximado da area ate o mostrador.",
+      "conceito": "Area ≈ 153.86",
+      "tipoInteracao": "drag",
+      "x": "55%",
+      "y": "60%",
+      "prompt": "Qual a area de um circulo de raio 7?",
+      "options": ["49π", "14π", "28", "7π"],
+      "answer": 0
     },
     {
       "id": "hotspot3",
-      "descricao": "Há um triângulo 3-4-5 e o painel pede o perímetro total.",
-      "conceito": "Perímetro = 12",
-      "tipoInteracao": "click"
+      "descricao": "Ha um triangulo 3-4-5 e o painel pede o perimetro total.",
+      "conceito": "Perimetro = 12",
+      "tipoInteracao": "click",
+      "x": "75%",
+      "y": "30%",
+      "prompt": "Perimetro de um triangulo 3,4,5?",
+      "options": ["12", "9", "10", "15"],
+      "answer": 0
     }
   ],
-  "desafioFinal": "Use os resultados dos cálculos geométricos para inserir a sequência numérica correta e abrir o painel misterioso."
+  "desafioFinal": "Use os resultados dos calculos geometricos para inserir a sequencia numerica correta e abrir o painel misterioso."
 }
