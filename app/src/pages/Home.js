@@ -40,7 +40,7 @@ const modules = [
 
 export default function Home() {
   const navigate = useNavigate();
-  const base = 'scenes/';
+  const base = process.env.PUBLIC_URL + '/scenes/';
 
   return (
     // Layout em grid responsivo contendo os modulos
