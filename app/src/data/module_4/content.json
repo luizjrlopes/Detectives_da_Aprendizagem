@@ -1,0 +1,26 @@
+{
+  "tituloMissao": "Missão Formas Secretas",
+  "narrativa": "Em um antigo observatório de matemáticos, há um painel trancado que só se abre quando a geometria é realmente compreendida. Cada forma geométrica fornece uma pista.",
+  "objetivo": "Resolva 3 desafios geométricos e insira a combinação correta para destravar o painel.",
+  "hotspots": [
+    {
+      "id": "hotspot1",
+      "descricao": "Um retângulo desenhado pede que você calcule a área de base 4 e altura 3.",
+      "conceito": "Área = 12",
+      "tipoInteracao": "click"
+    },
+    {
+      "id": "hotspot2",
+      "descricao": "Em um círculo com raio 7, você deve arrastar o valor aproximado da área até o mostrador.",
+      "conceito": "Área ≈ 153.86",
+      "tipoInteracao": "drag"
+    },
+    {
+      "id": "hotspot3",
+      "descricao": "Há um triângulo 3-4-5 e o painel pede o perímetro total.",
+      "conceito": "Perímetro = 12",
+      "tipoInteracao": "click"
+    }
+  ],
+  "desafioFinal": "Use os resultados dos cálculos geométricos para inserir a sequência numérica correta e abrir o painel misterioso."
+}

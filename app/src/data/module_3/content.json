@@ -1,0 +1,26 @@
+{
+  "tituloMissao": "Missão Corpo Vivo",
+  "narrativa": "Dentro de um museu de anatomia interativa, consta que um compartimento secreto guarda o conhecimento sobre órgãos vitais. Você deve coletar pistas anatômicas para acessá-lo.",
+  "objetivo": "Investigue 3 pontos do corpo humano e use as informações para liberar o cofre digital do museu.",
+  "hotspots": [
+    {
+      "id": "hotspot1",
+      "descricao": "Você encontra um modelo de coração pulsando, mostrando como o sangue é bombeado.",
+      "conceito": "Coração",
+      "tipoInteracao": "click"
+    },
+    {
+      "id": "hotspot2",
+      "descricao": "Ao lado, uma réplica de pulmão infla e desinfla, ilustrando a troca gasosa.",
+      "conceito": "Pulmões",
+      "tipoInteracao": "click"
+    },
+    {
+      "id": "hotspot3",
+      "descricao": "Há um esqueleto com uma etiqueta indicando \"RIM\" que precisa ser arrastada para o lugar correto.",
+      "conceito": "Rim",
+      "tipoInteracao": "drag"
+    }
+  ],
+  "desafioFinal": "Com as pistas dos órgãos, monte o diagrama correto no terminal interativo para revelar o compartimento secreto."
+}
