@@ -12,10 +12,11 @@ Este projeto é uma aplicação React que traz mini-jogos educacionais. O códig
    ```bash
    npm install
    ```
-3. Crie um arquivo `.env.local` na raiz do repositório (ou dentro de `app/`) contendo suas variáveis:
+3. Crie um arquivo `.env.local` dentro de `app/` com suas variáveis de ambiente:
    ```bash
-   REACT_APP_OPENAI_KEY=
+   REACT_APP_OPENAI_KEY=sua-chave-aqui
    ```
+   Esse arquivo não é versionado e deverá ser criado em todas as máquinas.
 
 ## Ambiente de desenvolvimento
 
@@ -35,6 +36,13 @@ Depois, sirva a pasta `build` (exemplo usando `serve`):
 ```bash
 npx serve -s build
 ```
+Para disponibilizar a aplicação no GitHub Pages execute:
+```bash
+npm run deploy
+```
+O `homepage` já está configurado para servir os arquivos de forma relativa,
+o que garante que as imagens carregadas em `public/scenes` funcionem tanto
+localmente quanto em produção.
 
 ### PWA
 
