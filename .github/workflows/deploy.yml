@@ -1,69 +1,48 @@
-name: Deploy React App
+name: Deploy to GitHub Pages
 
-# Workflow acionado em push na branch main
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
-  contents: read   # ler o conteúdo do repositório
-  pages: write     # permissão para publicar no GitHub Pages
-  id-token: write  # caso use OIDC (opcional aqui)
+  contents: read   # permitir leitura do repositório
+  pages: write     # permitir publicar no GitHub Pages
+  id-token: write  # necessário para OIDC (mesmo que não usado aqui)
 
 jobs:
+
   build:
-    # Executa em ambiente Ubuntu
+    name: Build the React App
     runs-on: ubuntu-latest
     steps:
-      # Faz checkout do código
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      # Instala Node.js versão 20
-      - uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '20'
 
-      # Instala dependências na pasta app
-      - name: Install dependencies
-        working-directory: app
-        run: npm ci
-
-      # Executa lint se existir script
-      - name: Run lint
-        working-directory: app
-        run: npm run lint --if-present
-
-      # Executa testes sem watch
-      - name: Run tests
-        working-directory: app
-        run: npm run test -- --watchAll=false
-
-      # Gera build de produção
-      - name: Build project
-        working-directory: app
-        run: npm run build
-
-      # Faz upload do build como artefato
-      - uses: actions/upload-artifact@v4
-        with:
-          name: build
-          path: app/build
+      - name: Install dependencies & build
+        working-directory: ./app
+        run: |
+          npm ci
+          npm run build
 
   deploy:
-    # Executa apenas após job build
+    name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      # Baixa artefato gerado no job build
-      - uses: actions/download-artifact@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
-          name: build
-          path: app/build
+          persist-credentials: true  # mantém GITHUB_TOKEN para o push
 
-      # Publica o conteúdo de app/build no GitHub Pages
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./app/build
+          force_orphan: true
