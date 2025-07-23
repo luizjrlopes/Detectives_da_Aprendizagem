@@ -36,4 +36,10 @@ Depois, sirva a pasta `build` (exemplo usando `serve`):
 npx serve -s build
 ```
 
+### PWA
+
+O projeto inclui `manifest.json` e `service-worker.js` para permitir a instalação
+como PWA. Basta acessar o aplicativo em produção e seguir as instruções do
+navegador para instalar.
+
 Isso permitirá testar o aplicativo em ambiente de produção local.
