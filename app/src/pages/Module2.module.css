@@ -39,3 +39,8 @@
 .btn:hover {
   transform: scale(1.05);
 }
+.info {
+  padding: calc(var(--space-unit) * 2);
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}

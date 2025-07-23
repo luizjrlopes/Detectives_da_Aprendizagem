@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import ConfettiParticle from './ConfettiParticle';
 import styles from './QuestionModal.module.css';
 
-export default function QuestionModal({ visible, question, onClose }) {
+export default function QuestionModal({ visible, question, clue, onClose }) {
   const [result, setResult] = useState(null); // true = correto, false = incorreto
 
   useEffect(() => {
@@ -47,6 +47,7 @@ export default function QuestionModal({ visible, question, onClose }) {
             transition={{ duration: result === false ? 0.5 : 0.4 }}
           >
             <h2>{question.prompt}</h2>
+            {clue && <p className={styles.clue}>{clue}</p>}
             <div className={styles.options}>
               {result === true && (
                 <motion.div

@@ -40,6 +40,11 @@
   margin-top: calc(var(--space-unit) * 2);
 }
 
+.clue {
+  margin-bottom: var(--space-unit);
+  font-size: 0.9rem;
+}
+
 .badge {
   background-color: var(--color-primary);
   color: var(--color-secondary);

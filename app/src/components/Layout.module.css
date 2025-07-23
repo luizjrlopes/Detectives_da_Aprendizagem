@@ -61,3 +61,18 @@
 .btn:hover {
   transform: scale(1.05);
 }
+
+/* Status bar for lives and XP */
+.statusbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: calc(var(--space-unit) * 1);
+}
+
+.statusbar progress {
+  width: 40%;
+  height: 8px;
+}
