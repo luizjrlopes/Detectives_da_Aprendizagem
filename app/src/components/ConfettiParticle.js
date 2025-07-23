@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import styles from './QuestionModal.module.css';
 
 // Partícula individual de confete usada no badge de vitória
 export default function ConfettiParticle({ x }) {
@@ -7,7 +8,7 @@ export default function ConfettiParticle({ x }) {
   const color = colors[Math.floor(Math.random() * colors.length)];
   return (
     <motion.div
-      className="confetti"
+      className={styles.confetti}
       style={{ left: x, backgroundColor: color }}
       initial={{ opacity: 1, y: 0, rotate: 0 }}
       animate={{ opacity: 0, y: 120, rotate: 360 }}

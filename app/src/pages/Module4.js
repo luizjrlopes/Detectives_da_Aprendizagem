@@ -5,7 +5,7 @@ import QuestionModal from '../components/QuestionModal';
 import Hotspot from '../components/Hotspot';
 import VictoryBadge from '../components/VictoryBadge';
 import { motion } from 'framer-motion';
-import '../App.css';
+import styles from './Module4.module.css';
 
 export default function Module4() {
   const questions = [
@@ -59,9 +59,10 @@ export default function Module4() {
 
   if (lives <= 0) {
     return (
-      <div className="end-screen">
+      <div className={styles.endScreen}>
         <h2>Game Over</h2>
         <motion.button
+          className={styles.btn}
           onClick={resetGame}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -74,9 +75,10 @@ export default function Module4() {
 
   if (finished) {
     return (
-      <div className="end-screen">
+      <div className={styles.endScreen}>
         <VictoryBadge />
         <motion.button
+          className={styles.btn}
           onClick={() => navigate('/')}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -89,7 +91,7 @@ export default function Module4() {
 
   return (
     <div
-      className="scene"
+      className={styles.scene}
       style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/scenes/geometria.png)` }}
     >
       {questions.map((q, i) => (

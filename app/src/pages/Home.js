@@ -62,7 +62,7 @@ export default function Home() {
             <p className={styles.desc}>{mod.desc}</p>
             {/* Botao que navega para a rota do modulo */}
             <motion.button
-              className={styles.button}
+              className={styles.btn}
               onClick={() => navigate(mod.path)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

@@ -5,7 +5,7 @@ import QuestionModal from '../components/QuestionModal';
 import Hotspot from '../components/Hotspot';
 import VictoryBadge from '../components/VictoryBadge';
 import { motion } from 'framer-motion';
-import '../App.css';
+import styles from './Module1.module.css';
 
 export default function Module1() {
   // Perguntas do módulo com posições dos hotspots
@@ -62,9 +62,10 @@ export default function Module1() {
   // Tela de derrota
   if (lives <= 0) {
     return (
-      <div className="end-screen">
+      <div className={styles.endScreen}>
         <h2>Game Over</h2>
         <motion.button
+          className={styles.btn}
           onClick={resetGame}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -78,9 +79,10 @@ export default function Module1() {
   // Tela de vitória
   if (finished) {
     return (
-      <div className="end-screen">
+      <div className={styles.endScreen}>
         <VictoryBadge />
         <motion.button
+          className={styles.btn}
           onClick={() => navigate('/modulo2')}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -93,7 +95,7 @@ export default function Module1() {
 
   return (
     <div
-      className="scene"
+      className={styles.scene}
       style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/scenes/padaria.png)` }}
     >
       {/* Hotspots que disparam as perguntas */}

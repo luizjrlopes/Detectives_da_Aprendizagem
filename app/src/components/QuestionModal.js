@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ConfettiParticle from './ConfettiParticle';
-import '../App.css';
+import styles from './QuestionModal.module.css';
 
 export default function QuestionModal({ visible, question, onClose }) {
   const [result, setResult] = useState(null); // true = correto, false = incorreto
@@ -28,13 +28,13 @@ export default function QuestionModal({ visible, question, onClose }) {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="modal-overlay"
+          className={styles.modalOverlay}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="modal-content"
+            className={styles.modalContent}
             initial={{ y: -50, opacity: 0 }}
             animate={{
               y: 0,
@@ -47,10 +47,10 @@ export default function QuestionModal({ visible, question, onClose }) {
             transition={{ duration: result === false ? 0.5 : 0.4 }}
           >
             <h2>{question.prompt}</h2>
-            <div className="options">
+            <div className={styles.options}>
               {result === true && (
                 <motion.div
-                  className="badge"
+                  className={styles.badge}
                   initial={{ scale: 0 }}
                   animate={{ scale: [0, 1.2, 1] }}
                   transition={{ duration: 0.6 }}
@@ -62,6 +62,7 @@ export default function QuestionModal({ visible, question, onClose }) {
               {question.options.map((opt, idx) => (
                 <motion.button
                   key={idx}
+                  className={styles.btn}
                   onClick={() => handleClick(idx === question.answer)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

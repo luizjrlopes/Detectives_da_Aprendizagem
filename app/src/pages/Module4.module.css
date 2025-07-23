@@ -1,0 +1,41 @@
+:root {
+  --color-primary: #f1c40f;
+  --color-secondary: #2c2c2c;
+  --color-bg: #1f1f1f;
+  --color-text: #ffffff;
+  --color-error: #c0392b;
+  --color-success: #27ae60;
+  --space-unit: 8px;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 160px);
+  background-size: cover;
+  background-position: center;
+}
+
+.end-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 160px);
+  gap: calc(var(--space-unit) * 2);
+}
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  padding: calc(var(--space-unit) * 1) calc(var(--space-unit) * 2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
