@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useGame } from '../context/GameContext';
 import QuestionModal from '../components/QuestionModal';
+import Hotspot from '../components/Hotspot';
+import VictoryBadge from '../components/VictoryBadge';
 import { motion } from 'framer-motion';
 import '../App.css';
 
@@ -62,7 +64,13 @@ export default function Module1() {
     return (
       <div className="end-screen">
         <h2>Game Over</h2>
-        <button onClick={resetGame}>Reiniciar</button>
+        <motion.button
+          onClick={resetGame}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Reiniciar
+        </motion.button>
       </div>
     );
   }
@@ -71,8 +79,14 @@ export default function Module1() {
   if (finished) {
     return (
       <div className="end-screen">
-        <h2>Missão Completa!</h2>
-        <button onClick={() => navigate('/modulo2')}>Próxima Missão</button>
+        <VictoryBadge />
+        <motion.button
+          onClick={() => navigate('/modulo2')}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Próxima Missão
+        </motion.button>
       </div>
     );
   }
@@ -84,15 +98,14 @@ export default function Module1() {
     >
       {/* Hotspots que disparam as perguntas */}
       {questions.map((q, i) => (
-        <motion.div
+        <Hotspot
           key={q.id}
-          className="hotspot"
-          style={{ left: q.x, top: q.y }}
+          x={q.x}
+          y={q.y}
           onClick={() => {
             setCurrentQ(i);
             setShowModal(true);
           }}
-          whileHover={{ scale: 1.2 }}
         />
       ))}
 

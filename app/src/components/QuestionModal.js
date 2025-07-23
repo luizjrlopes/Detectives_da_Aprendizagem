@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import ConfettiParticle from './ConfettiParticle';
 import '../App.css';
 
 export default function QuestionModal({ visible, question, onClose }) {
+  const [result, setResult] = useState(null); // true = correto, false = incorreto
+
+  useEffect(() => {
+    if (!visible) setResult(null); // reseta estado ao fechar
+  }, [visible]);
+
   if (!question) return null;
+
+  const handleClick = (correct) => {
+    setResult(correct);
+    setTimeout(() => onClose(correct), 500);
+  };
+
+  const confetti =
+    result === true
+      ? Array.from({ length: 8 }, (_, i) => (
+          <ConfettiParticle key={i} x={`${Math.random() * 100}%`} />
+        ))
+      : null;
 
   return (
     <AnimatePresence>
@@ -16,16 +35,39 @@ export default function QuestionModal({ visible, question, onClose }) {
         >
           <motion.div
             className="modal-content"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0.8 }}
+            initial={{ y: -50, opacity: 0 }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              ...(result === false
+                ? { x: [-10, 10, -10, 10, 0] }
+                : {}),
+            }}
+            exit={{ y: 50, opacity: 0 }}
+            transition={{ duration: result === false ? 0.5 : 0.4 }}
           >
             <h2>{question.prompt}</h2>
             <div className="options">
+              {result === true && (
+                <motion.div
+                  className="badge"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: [0, 1.2, 1] }}
+                  transition={{ duration: 0.6 }}
+                >
+                  Acertou!
+                </motion.div>
+              )}
+              {confetti}
               {question.options.map((opt, idx) => (
-                <button key={idx} onClick={() => onClose(idx === question.answer)}>
+                <motion.button
+                  key={idx}
+                  onClick={() => handleClick(idx === question.answer)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   {opt}
-                </button>
+                </motion.button>
               ))}
             </div>
           </motion.div>
