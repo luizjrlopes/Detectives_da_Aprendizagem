@@ -1,71 +1,35 @@
-# 8. Agents (Tarefas)
+# Lista de Tarefas
 
-Este documento define as **tarefas** (agents) para orientar o GitHub Copilot/Codex a gerar o aplicativo passo a passo.
-
-## Tarefa 1: Setup Inicial
-- **Objetivo**: Criar o repositório vazio, scaffold com Create React App e instalar dependências.
-- **Resultados Esperados**:
-  - Estrutura básica do CRA criada.
-  - Dependências: react-router-dom, framer-motion, gh-pages.
-
-## Tarefa 2: Configuração de Deploy
-- **Objetivo**: Configurar scripts e homepage no package.json para deploy no GitHub Pages.
-- **Resultados Esperados**:
-  - `homepage` apontando para a URL GitHub Pages.
-  - Scripts `predeploy` e `deploy`.
-  - gh-pages instalado como devDependency.
-
-## Tarefa 3: Estrutura de Pastas
-- **Objetivo**: Criar pastas conforme .docs/01-architecture.md:
-  - public/scenes
-  - src/components
-  - src/pages
-  - src/context
-  - src/data
-- **Resultados Esperados**:
-  - Estrutura de pastas criada, arquivos README.md placeholder em cada.
-
-## Tarefa 4: Roteamento
-- **Objetivo**: Implementar React Router:
-  - `Routes` para Home (`/`), Module1–4.
-  - Componente `<Layout>` envolvendo `Header` e `FooterNav`.
-- **Resultados Esperados**:
-  - Navegação funcional entre rotas.
-
-## Tarefa 5: Contexto de Jogo
-- **Objetivo**: Criar `GameContext` para armazenar vidas e XP.
-- **Resultados Esperados**:
-  - Provider configurado em `src/context/GameContext.js`.
-  - Hook `useGame()` disponível.
-
-## Tarefa 6: Componente Home
-- **Objetivo**: Implementar `Home.js`:
-  - Lista de cartões com preview dos módulos.
-  - Each card links to `/moduloX`.
-- **Resultados Esperados**:
-  - Layout mobile-friendly.
-
-## Tarefa 7: Implementar Módulos
-- **Objetivo**: Para cada módulo (Module1–4):
-  - Criar `ModuleX.js` seguindo .docs/02-modules.md.
-  - Hotspots, QuestionModal, lógica de missão (lives, XP).
-- **Resultados Esperados**:
-  - Módulos interativos sem falhas.
-
-## Tarefa 8: Animações e Transições
-- **Objetivo**: Incluir animações com Framer Motion conforme .docs/05-transitions.md.
-- **Resultados Esperados**:
-  - Transições de cena, badge, hover/tap animados.
-
-## Tarefa 9: UI e Style Guide
-- **Objetivo**: Aplicar guia de estilo do .docs/06-style-guide.md em CSS Modules ou styled-components.
-- **Resultados Esperados**:
-  - Cores, tipografia, espaçamentos conforme especificado.
-
-## Tarefa 10: Deploy Final
-- **Objetivo**: Realizar deploy com `npm run deploy` e validar no GitHub Pages.
-- **Resultados Esperados**:
-  - Aplicativo disponível publicamente em https://<usuário>.github.io/<repo>/
+1. **Substituir placeholders no `src/App.js`:** remover `...` e implementar a árvore de `<Route>` completa com React Router v6.
+2. **Ajustar versões do React:** definir `"react"` e `"react-dom"` como `^18.2.0` no `package.json`.
+3. **Limpar dependências no `package.json`:** remover bibliotecas de Node (e.g., `sharp`, `fast-glob`, `js-yaml`, `openai`, `svgo`) de `dependencies`.
+4. **Criar arquivo de variáveis de ambiente:** adicionar `.env.local` na raiz com `REACT_APP_*` necessários.
+5. **Revisar caminhos de assets e roteamento:** validar uso de `process.env.PUBLIC_URL` e ajustar para caminhos relativos quando apropriado.
+6. **Verificar exportações de componentes:** checar todos os arquivos em `src/components` garantindo `export default/import` corretos.
+7. **Executar e corrigir build de desenvolvimento:** rodar `npm install` e `npm start`, analisar e resolver erros de console.
+8. **Testar build de produção:** rodar `npm run build`, servir via `serve -s build` e corrigir erros de deploy.
+9. **Validar funcionalidade de hotspots e imagens:** testar carregamento de cenários em `public/scenes` e caminhos de import.
+10. **Documentar ajustes realizados:** atualizar README com instruções de instalação, variáveis e roteamento.
 
 ---
-Pronto! A cada etapa, basta apontar o Codex para este arquivo e ele criará a parte correspondente de forma exata.
+
+# Agents.md
+
+## App Fix Agent Instructions
+
+**Objetivo:** automatizar a correção da aplicação front-end contida em `app.zip`.
+
+**Prompt para o agente:**
+
+> "Analise o repositório front-end da aplicação e execute as seguintes ações:
+> 1. Substitua todos os placeholders `...` em `src/App.js` pela definição completa de rotas usando React Router v6.
+> 2. Atualize as dependências de `react` e `react-dom` para a versão `^18.2.0` e remova quaisquer dependências de Node que não sejam compatíveis com o ambiente de browser.
+> 3. Crie um arquivo `.env.local` com todas as variáveis de ambiente necessárias (ex.: `REACT_APP_OPENAI_KEY`).
+> 4. Revise e corrija os caminhos de assets (`PUBLIC_URL` vs. caminhos relativos) para garantir que as imagens em `public/scenes` carreguem corretamente em ambientes de desenvolvimento e produção.
+> 5. Verifique todas as exportações e imports de componentes em `src/components` e corrija eventuais erros de módulo não encontrado.
+> 6. Execute `npm install` e `npm start`, identifique erros de build ou runtime e corrija-os.
+> 7. Execute `npm run build`, sirva a pasta `build` e corrija quaisquer erros de produção.
+> 8. Atualize o `README.md` com instruções claras de instalação, configuração de variáveis e uso do aplicativo."
+
+**Expectativa de Entrega:** pull request com todas as correções aplicadas e documentação atualizada, pronto para CI/CD.
+
