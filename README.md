@@ -1,4 +1,4 @@
-# Detetives da Aprendizagem
+# Vorya
 
 Este projeto é uma aplicação React que traz mini-jogos educacionais. O código da interface fica no diretório `app/`.
 
