@@ -1,0 +1,11 @@
+{
+  "tituloMissao": "Missão Cofre Fracionário",
+  "narrativa": "Na padaria do campus, um cofre guarda receitas valiosas. Cada estação da cozinha revela uma pista fracionária para quem prestar atenção.",
+  "objetivo": "Descubra 3 pistas de frações e calcule o código que libera o cofre.",
+  "hotspots": [
+    {"id":"hotspot1","descricao":"A pizza recém-saída do forno tem um pedaço faltando.","conceito":"1/4","tipoInteracao":"click"},
+    {"id":"hotspot2","descricao":"Na balança, medidas diferentes precisam ser somadas.","conceito":"2/3 + 1/6","tipoInteracao":"click"},
+    {"id":"hotspot3","descricao":"O painel do cofre pede que você converta a fração final em porcentagem.","conceito":"3/5 → 60%","tipoInteracao":"drag"}
+  ],
+  "desafioFinal": "Use as três pistas para calcular o valor correto e abrir o cofre."
+}
