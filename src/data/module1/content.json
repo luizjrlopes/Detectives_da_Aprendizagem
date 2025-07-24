@@ -1,0 +1,7 @@
+{
+  "title": "Missao Cofre Fracionario",
+  "sceneImage": "scene1.jpg",
+  "hotspots": [
+    {"x": 100, "y": 200, "tipoInteracao": "info", "descricao": "Descricao 1", "conceito": "Conceito 1"}
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Missao da terceira",
+  "sceneImage": "scene3.jpg",
+  "hotspots": [
+    {"x": 50, "y": 250, "tipoInteracao": "info", "descricao": "Descricao 3", "conceito": "Conceito 3"}
+  ]
+}

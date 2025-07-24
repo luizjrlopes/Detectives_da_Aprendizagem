@@ -1,0 +1,7 @@
+{
+  "title": "Missao Quarta",
+  "sceneImage": "scene4.jpg",
+  "hotspots": [
+    {"x": 80, "y": 180, "tipoInteracao": "info", "descricao": "Descricao 4", "conceito": "Conceito 4"}
+  ]
+}
