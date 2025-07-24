@@ -1,5 +1,12 @@
-import Link from "next/link";
-import { semesters } from "@/app/data/semesters.json";
+import Link from 'next/link';
+import semestersData from '@/app/data/semesters.json';
+
+interface Semester {
+  id: number;
+  disciplinas: string[];
+}
+
+const { semesters } = semestersData as { semesters: Semester[] };
 
 export default function Home() {
   return (

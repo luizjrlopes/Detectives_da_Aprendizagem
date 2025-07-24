@@ -1,6 +1,9 @@
-import { useRouter } from "next/router";
-import ModuleCard from "../../../components/ModuleCard";
-import { modules } from "@/app/data/schools.json";
+import { useRouter } from 'next/router';
+import ModuleCard from '../../../components/ModuleCard';
+import schoolsData from '@/app/data/schools.json';
+import { ModuloAppPEX } from '@/app/models/Module';
+
+const modules: ModuloAppPEX[] = (schoolsData as { modules: ModuloAppPEX[] }).modules;
 
 export default function SemestreModule() {
   const router = useRouter();
