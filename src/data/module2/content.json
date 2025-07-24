@@ -1,0 +1,7 @@
+{
+  "title": "Missao Biosfera Oculta",
+  "sceneImage": "scene2.jpg",
+  "hotspots": [
+    {"x": 150, "y": 100, "tipoInteracao": "info", "descricao": "Descricao 2", "conceito": "Conceito 2"}
+  ]
+}

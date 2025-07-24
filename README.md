@@ -51,3 +51,6 @@ como PWA. Basta acessar o aplicativo em produção e seguir as instruções do
 navegador para instalar.
 
 Isso permitirá testar o aplicativo em ambiente de produção local.
+
+## Nova Estrutura
+O projeto inclui uma pasta `src/` na raiz com componentes e páginas modularizadas. Execute `npm start` após instalar dependências para rodar essa versão.

@@ -1,0 +1,16 @@
+/* src/style.css */
+:root {
+  --bg-dark: #121212;
+  --yellow: #ffd600;
+}
+
+.app-container {
+  background: var(--bg-dark);
+  color: white;
+  min-height: 100vh;
+}
+
+.header { padding: 1rem; }
+.hotspot { width: 24px; height: 24px; background: var(--yellow); border: none; border-radius: 50%; }
+.modal { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; }
+.modal-content { background: white; color: black; padding: 1rem; max-width: 90%; }
