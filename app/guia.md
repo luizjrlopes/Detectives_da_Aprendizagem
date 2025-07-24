@@ -1,5 +1,5 @@
-Guia de Integração do App Zorya – Módulos Interativos
-Este documento reúne todas as instruções e exemplos para transformar o protótipo estático do App Zorya num ambiente totalmente interativo, utilizando o JSON dinâmico criado (content.json) e sobrepondo hotspots clicáveis/arrastáveis sobre a cena.
+Guia de Integração do App Vorya – Módulos Interativos
+Este documento reúne todas as instruções e exemplos para transformar o protótipo estático do App Vorya num ambiente totalmente interativo, utilizando o JSON dinâmico criado (content.json) e sobrepondo hotspots clicáveis/arrastáveis sobre a cena.
 
 1. Estrutura de Arquivos por Módulo
    pgsql

@@ -1,6 +1,6 @@
-# 🕵️ Agents para o App Zorya
+# 🕵️ Agents para o App Vorya
 
-Este documento descreve agentes especializados para apoiar o desenvolvimento, polimento e operação do **App Zorya** (o protótipo de investigação pedagógica). Cada agente foca em uma camada crítica do produto, garantindo modularidade e excelência.
+Este documento descreve agentes especializados para apoiar o desenvolvimento, polimento e operação do **App Vorya** (o protótipo de investigação pedagógica). Cada agente foca em uma camada crítica do produto, garantindo modularidade e excelência.
 
 ---
 
