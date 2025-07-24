@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    // <— ESSENCIAL para o paths funcionar
+    "baseUrl": ".",
+    "paths": {
+      // agora @/ qualquer coisa vai buscar em src/
+      "@/*": ["src/*"],
+      // se quiser algo para assets públicos:
+      "@public/*": ["public/*"]
+    },
+    "incremental": true,
+    "module": "esnext"
+  },
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"],
+  "exclude": ["node_modules"]
+}
