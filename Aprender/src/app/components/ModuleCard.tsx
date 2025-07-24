@@ -1,4 +1,10 @@
-export default function ModuleCard({ module }) {
+import { ModuloAppPEX } from '../models/Module';
+
+interface Props {
+  module: ModuloAppPEX;
+}
+
+export default function ModuleCard({ module }: Props) {
   return (
     <div>
       <h3>{module.nomeEscola}</h3>
