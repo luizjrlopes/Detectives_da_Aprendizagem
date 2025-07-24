@@ -1,4 +1,4 @@
-// scripts/openai-client.ts
+#!/usr/bin/env ts-node
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -24,5 +24,16 @@ export async function generateIdeas(
     ],
   });
 
-  return chat.choices[0].message.content.trim();
+  // === Checagem de segurança para StrictNullChecks ===
+  if (!chat.choices?.length) {
+    throw new Error("Resposta vazia da API OpenAI: nenhuma escolha retornada.");
+  }
+  const message = chat.choices[0].message;
+  if (!message?.content) {
+    throw new Error(
+      "Resposta malformada da API OpenAI: sem conteúdo na mensagem."
+    );
+  }
+
+  return message.content.trim();
 }
